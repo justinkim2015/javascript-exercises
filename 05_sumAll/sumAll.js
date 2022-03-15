@@ -1,7 +1,8 @@
 const sumAll = function(start, finish) {
     let answer = 0;
-
-    if (start <= finish) {
+    if (typeof start !== 'number' || typeof finish !== 'number') {
+        return 'ERROR'
+    } else if (start <= finish) {
         for (let i = start; i <= finish; i++) {
           if (start < 0 || finish < 0) {
               return 'ERROR';
